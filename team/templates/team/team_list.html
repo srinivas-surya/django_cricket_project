@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team List</title>
+</head>
+<body>
+
+    <h1 style="text-align:center">List Of Teams</h1>
+
+    {% for team in team_data %}
+        <p style="font-family:verdana;">Identifier Name: <a href="{% url 'player_list' iden=team.identifier %}" style="color:blue;" >{{team.identifier}}</a></p>
+        <p style="font-family:verdana;">Team Name: {{team.name}}</p>
+        <p style="font-family:verdana;">ClubState: {{team.clubState}}</p>
+        <img src="{{team.logoUri.url}}"  alt="Team Logo">
+    
+    {% endfor %}
+    <a href="{% url 'points' %}"><p style="text-align:center;color:red;font-family:verdana;">Points Page</p></a>
+    <a href="{% url 'home' %}"><p style="text-align:center;color:red;font-family:verdana;">Home Page</p></a>
+
+
+
+
+
+</body>
+</html>

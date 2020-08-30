@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 style="text-align:center">Players List ({{team_name}})</h1>
+
+    {% for player in player_list %}
+
+        <p>FirstName: {{player.firstName}}</p>
+        <p>LastName: {{player.lastName}}</p>
+        <p>JerseyNumber: {{player.playerJerseyNumber}}</p>
+        <p>Country:{{player.country}}</p>
+        <img src="{{player.imageUri.url}}"  alt="Player Image">
+
+    {% endfor %}
+    <br><br>
+
+    <a href="{% url 'team_list' %}"><p style="text-align:center;color:red;font-family:verdana;">Team List Page</p></a>
+    <a href="{% url 'home' %}"><p style="text-align:center;color:red;font-family:verdana;">Home Page</p></a>
+</body>
+</html>

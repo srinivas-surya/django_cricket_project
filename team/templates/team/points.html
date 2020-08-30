@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2 style="text-align:center">Points Table</h2>
+  <p>points between the teams:</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>Matches</th>
+        <th>Wins</th>
+        <th>Lose</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for point in points %}
+      <tr>
+        <td>{{point.team_name}}</td>
+        <td>{{point.matches_played}}</td>
+        <td>{{point.wins}}</td>
+        <td>{{point.lose}}</td>
+        <td>{{point.points}}</td>
+      {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br><br>
+
+<a href="{% url 'matches' %}"><p style="text-align:center;color:red;font-family:verdana;">Matches Page</p></a>
+<a href="{% url 'home' %}"><p style="text-align:center;color:red;font-family:verdana;">Home Page</p></a>
+
+</body>
+</html>
