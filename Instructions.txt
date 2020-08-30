@@ -1,0 +1,12 @@
+                                                          Project Summary
+
+In this project i am displaying team_list data.
+Once u clicked on the team u will see the players data in the team 
+In the Matches page we have  3 drop downs in that we have to select team1 and team2 and winner between the 2 teams. once we click the save the data stores in the database.
+In the Points Page we will see the points of the each team along with matches_played and wins, lose
+
+If we want to create team or palyer in project. we have to use admin interface of django
+
+username: admin
+password: Admin#12345
+
